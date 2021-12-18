@@ -93,6 +93,7 @@ function compra() {
         switch (productos) {
             case 1:
                 if(producto1['stock']){
+                    alert('producto añadido al carrito');
                     carrito.createitem(producto1['precio']);
                 } else{
                     alert('no se puede añadir el producto porque no cuenta con stock');
@@ -101,6 +102,7 @@ function compra() {
         
             case 2:
                 if(producto2['stock']){
+                    alert('producto añadido al carrito');
                     carrito.createitem(producto2['precio']);
                 } else{
                     alert('no se puede añadir el producto porque no cuenta con stock');
@@ -109,6 +111,7 @@ function compra() {
                 
             case 3:
                 if(producto3['stock']){
+                    alert('producto añadido al carrito');
                     carrito.createitem(producto3['precio']);
                 } else{
                     alert('no se puede añadir el producto porque no cuenta con stock');
@@ -117,6 +120,7 @@ function compra() {
 
             case 4:
                 if(producto4['stock']){
+                    alert('producto añadido al carrito');
                     carrito.createitem(producto4['precio']);
                 } else{
                     alert('no se puede añadir el producto porque no cuenta con stock');
@@ -125,6 +129,7 @@ function compra() {
 
             case 5:
                 if(producto5['stock']){
+                    alert('producto añadido al carrito');
                     carrito.createitem(producto5['precio']);
                 } else{
                     alert('no se puede añadir el producto porque no cuenta con stock');
@@ -142,9 +147,11 @@ const sumaTotal = () => {
     for (let i = 0; i < carrito.lista.length; i++) {
         total += carrito.lista[i];
     }
+
+    const precioFinal = document.querySelector('.compra-final');
+    const item = document.createElement('LI');
+    item.innerHTML = `El total a pagar es de: $${total}`;
+    precioFinal.appendChild(item);
 }
 
 sumaTotal();
-
-alert('total a pagar: $' + total);
-
