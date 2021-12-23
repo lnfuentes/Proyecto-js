@@ -1,0 +1,29 @@
+.card{
+    margin: 20px;
+}
+
+.card img{
+    padding-top: 20px;
+    height: 200px;
+    object-fit: cover;
+}
+
+input{
+    width: 50px;
+}
+
+.delete {
+    padding: 2px 10px;
+    margin-bottom: 5px;
+}
+
+h1{
+    margin-top: 50px;
+}
+
+.precio-final{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px;
+}
