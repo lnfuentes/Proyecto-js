@@ -121,6 +121,7 @@ const sumatotal = () => {
     });
 
     carritoTotal.innerHTML = `Total a pagar: $${total}`;
+    addLocalStorage()
 }
 
 
@@ -152,3 +153,17 @@ const modificarCantidad = e => {
         }
     })
 }
+
+
+// Uso del localStorage
+function addLocalStorage(){
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+  }
+  
+  window.onload = function(){
+    const storage = JSON.parse(localStorage.getItem('carrito'));
+    if(storage){
+      carrito = storage;
+      mostrarCarrito()
+    }
+  }
